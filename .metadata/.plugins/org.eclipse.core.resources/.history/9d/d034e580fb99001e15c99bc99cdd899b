@@ -1,0 +1,9 @@
+import java.util.LinkedList;
+
+public class test {
+	private LinkedList<Double> bill = new LinkedList<Double>();
+	
+	public test() {
+		
+	}
+}

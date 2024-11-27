@@ -1,0 +1,28 @@
+What is the running time of adding a new element to a stack? O(1)
+
+How does Merge Sort achieve O(nlogn) running time? outer loop and nested division inside
+
+True/False: The Binary Search algorithm only works on a sorted dataset? True
+
+---
+4. Consider the following code:
+Queue<String> queue = new LinkedList<String>();
+queue.add("Blue");
+queue.add("Red");
+queue.add("Yellow");
+System.out.println(queue.remove());
+queue.add("Green");
+queue.add("Purple");
+System.out.println(queue.peek());
+queue.remove();
+queue.add("Orange");
+System.out.println(queue.remove());
+
+What is the output of the code above? 
+Blue Red Yellow
+
+What is the running time of the code above? O(1)
+
+Illustrate the current contents of the Queue after the code finishes.
+Front of Queue:  [Green, Purple, Orange]  Back of Queue
+---

@@ -1,0 +1,173 @@
+What is the running time of adding a new element to a stack? O(1)
+
+How does Merge Sort achieve O(nlogn) running time? outer loop and nested division inside
+
+True/False: The Binary Search algorithm only works on a sorted dataset? True
+
+---
+4. Consider the following code:
+Queue<String> queue = new LinkedList<String>();
+queue.add("Blue");
+queue.add("Red");
+queue.add("Yellow");
+System.out.println(queue.remove());
+queue.add("Green");
+queue.add("Purple");
+System.out.println(queue.peek());
+queue.remove();
+queue.add("Orange");
+System.out.println(queue.remove());
+
+What is the output of the code above? 
+Blue Red Yellow
+
+What is the running time of the code above? O(1)
+
+Illustrate the current contents of the Queue after the code finishes.
+Front of Queue:  [Green, Purple, Orange]  Back of Queue
+---
+
+Given the following unsorted array:
+10 6 21 14 1 3 5
+Suppose you are running selection sort to sort this array of integers. Selection sort consists of
+several iterations across the array. Illustrate the steps of selection sort for each iteration until the
+array is sorted
+
+1: 1 6 21 14 10 3 5
+2: 1 3 21 14 10 6 5
+3: 1 3 5 14 10 6 21
+4: 1 3 5 6 10 14 21
+5: 
+6:
+7:
+---
+
+The table below lists the big-O running times of certain operations. Fill in the missing spots of the
+table with the correct running time.
+
++--------------------------------------------+------------------+
+| Operation                              	 | Time Complexity  |
+|--------------------------------------------|------------------|
+| Linear Search                          	 | O(n)             |
+| Quick Sort                             	 | O(n^2)           |
+| Binary Search                          	 | O(log n)         |
+| Popping an element from the Stack      	 | O(1)             |
+| Printing out a linked list using recursion | O(n)             |
++--------------------------------------------+------------------+
+
+---
+
+Suppose you want to create your own Stack data structure class, but you need to decide if you
+should use an Array or a Linked List. In general, when should you use an array vs a LinkedList as an
+underlying data structure for a stack?
+
+Use an Array for the Stack when:
+1. Random Access: If you need constant-time access to elements by index, use an array. Array elements can be accessed in O(1) time.
+2. Fixed Size: If the size of the stack is fixed and known in advance, an array may be more efficient in terms of memory usage and simplicity.
+3. Sequential Access: If you frequently need to iterate through elements sequentially, an array allows for efficient sequential access.
+4. Space Efficiency: Arrays generally have less overhead compared to linked lists, as they don't need additional pointers for linking nodes.
+
+Use a Linked List for the Stack when:
+1. Dynamic Size: If the size of the stack can change dynamically, a linked list is more suitable, as it can easily grow or shrink without the need for resizing.
+2. Constant-time Insertion/Deletion: Insertion and deletion at the beginning of a linked list can be done in constant time (O(1)), making it suitable for stack operations.
+3. No Fixed Size Limitations: Linked lists don't have a fixed size limitation, unlike arrays. This flexibility can be advantageous if the size of the stack is unpredictable.
+4. No Wasted Space: Linked lists use memory more efficiently for dynamic resizing since they only allocate memory as needed.
+
+---
+
+What is a stack overflow?
+A "stack overflow" happens when a computer program runs out of space in its memory for keeping track of functions it's working on. This often occurs when a program calls functions in a way that keeps piling up on top of each other without stopping.
+
+Here's a simpler breakdown:
+
+    Call Stack: Imagine a stack of plates. Each plate represents a function the program is working on.
+
+    Function Calls: When a function is called, a plate is added to the stack with information about that function.
+
+    Recursion: Sometimes, a function calls itself, and this process repeats. It's like putting more and more plates on top of each other.
+
+    Stack Overflow: If the stack of plates gets too tall (exceeds its limit), the program faces a "stack overflow." It can't add any more plates, and the program might crash.
+
+    Causes: This usually happens with infinite loops, where a function keeps calling itself without a proper way to stop. It's like stacking plates without an endpoint.
+
+---
+
+True/False: It doesn’t matter what sorting algorithm I use; they all do the same thing in the end.
+
+False
+
+---
+
+Big o table
++-----------------------+--------------------------+-------------------------+--------------------------+
+| Data Structure        | Time Complexity (Average) | Time Complexity (Worst) | Space Complexity (Worst)|
++-----------------------+--------------------------+-------------------------+--------------------------+
+| Array                 | Θ(1)                     | Θ(n)                    | O(n)                     |
+| Stack                 | Θ(n)                     | Θ(n)                    | O(n)                     |
+| Queue                 | Θ(n)                     | Θ(n)                    | O(n)                     |
+| Singly-Linked List    | Θ(n)                     | Θ(n)                    | O(n)                     |
+| Doubly-Linked List    | Θ(n)                     | Θ(n)                    | O(n)                     |
+| Skip List             | Θ(log(n))                | Θ(log(n))               | O(n log(n))              |
+| Hash Table            | N/A                      | Θ(1)                    | O(n)                     |
+| Binary Search Tree    | Θ(log(n))                | Θ(log(n))               | O(n)                     |
+| Cartesian Tree        | N/A                      | Θ(log(n))               | O(n)                     |
+| B-Tree                | Θ(log(n))                | Θ(log(n))               | O(n)                     |
+| Red-Black Tree        | Θ(log(n))                | Θ(log(n))               | O(n)                     |
+| Splay Tree            | N/A                      | Θ(log(n))               | O(n)                     |
+| AVL Tree              | Θ(log(n))                | Θ(log(n))               | O(n)                     |
+| KD Tree               | Θ(log(n))                | Θ(log(n))               | O(n)                     |
++-----------------------+--------------------------+-------------------------+--------------------------+
+
++---------------------+-----------------------+---------------------------+-------------------------+--------------------------+
+| Algorithm           | Time Complexity (Best)| Time Complexity (Average) | Time Complexity (Worst) | Space Complexity (Worst) |
++---------------------+-----------------------+---------------------------+-------------------------+--------------------------+
+| Quicksort           | Ω(n log(n))           | Θ(n log(n))               | O(n^2)                  | O(log(n))                |
+| Mergesort           | Ω(n log(n))           | Θ(n log(n))               | O(n log(n))             | O(n)                     |
+| Timsort             | Ω(n)                  | Θ(n log(n))               | O(n log(n))             | O(n)                     |
+| Heapsort            | Ω(n log(n))           | Θ(n log(n))               | O(n log(n))             | O(1)                     |
+| Bubble Sort         | Ω(n)                  | Θ(n^2)                    | O(n^2)                  | O(1)                     |
+| Insertion Sort      | Ω(n)                  | Θ(n^2)                    | O(n^2)                  | O(1)                     |
+| Selection Sort      | Ω(n^2)                | Θ(n^2)                    | O(n^2)                  | O(1)                     |
+| Tree Sort           | Ω(n log(n))           | Θ(n log(n))               | O(n^2)                  | O(n)                     |
+| Shell Sort          | Ω(n log(n))           | Θ(n(log(n))^2)            | O(n(log(n))^2)          | O(1)                     |
+| Bucket Sort         | Ω(n+k)                | Θ(n+k)                    | O(n^2)                  | O(n)                     |
+| Radix Sort          | Ω(nk)                 | Θ(nk)                     | O(nk)                   | O(n+k)                   |
+| Counting Sort       | Ω(n+k)                | Θ(n+k)                    | O(n+k)                  | O(k)                     |
+| Cubesort            | Ω(n)                  | Θ(n log(n))               | O(n log(n))             | O(n)                     |
++---------------------+-----------------------+---------------------------+-------------------------+--------------------------+
+
+---
+
+QuickSort is a highly efficient sorting algorithm that follows the divide-and-conquer paradigm. Here's a simplified description of QuickSort:
+
+    Choose Pivot: Select a pivot element from the array. The choice of pivot can affect the algorithm's efficiency.
+
+    Partitioning: Rearrange the array such that elements smaller than the pivot are on the left, and elements greater than the pivot are 
+    on the right. The pivot is now in its final sorted position.
+
+    Recursion: Apply the same process recursively to the sub-arrays on the left and right of the pivot until the entire array is sorted.
+
+    Combine: No additional combining step is needed, as the array is sorted in place during the partitioning step.
+
+QuickSort is known for its average-case time complexity of O(n log n), making it one of the fastest sorting algorithms. However, its 
+worst-case time complexity is O(n^2), which occurs when the pivot selection consistently results in an unbalanced partition. Various 
+strategies, such as randomizing the pivot selection, help mitigate this issue in practice.
+
+---
+
+Stack Runtimes
++--------------+----------------------------------------------+------------------+
+| Operation    | Description                                  | Time Complexity |
++--------------+----------------------------------------------+------------------+
+| Push         | Add an element to the top of the stack        | O(1)             |
+| Pop          | Remove the element from the top of the stack | O(1)             |
+| Peek (Top)   | Retrieve the element from the top of the stack| O(1)             |
+| Search       | Find the position of an element in the stack  | O(n)             |
+| IsEmpty      | Check if the stack is empty                  | O(1)             |
+| Size         | Get the number of elements in the stack       | O(1)             |
+| Clear        | Remove all elements from the stack           | O(1)             |
++--------------+----------------------------------------------+------------------+
+
+
+
+

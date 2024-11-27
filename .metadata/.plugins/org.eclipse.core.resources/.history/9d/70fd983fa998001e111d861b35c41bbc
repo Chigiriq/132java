@@ -1,0 +1,5 @@
+What is the running time of adding a new element to a stack? O(1)
+
+How does Merge Sort achieve O(nlogn) running time? outer loop and nested division inside
+
+True/False: The Binary Search algorithm only works on a sorted dataset? True

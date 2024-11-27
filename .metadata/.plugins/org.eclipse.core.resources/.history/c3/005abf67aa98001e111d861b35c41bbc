@@ -1,0 +1,78 @@
+What is the running time of adding a new element to a stack? O(1)
+
+How does Merge Sort achieve O(nlogn) running time? outer loop and nested division inside
+
+True/False: The Binary Search algorithm only works on a sorted dataset? True
+
+---
+4. Consider the following code:
+Queue<String> queue = new LinkedList<String>();
+queue.add("Blue");
+queue.add("Red");
+queue.add("Yellow");
+System.out.println(queue.remove());
+queue.add("Green");
+queue.add("Purple");
+System.out.println(queue.peek());
+queue.remove();
+queue.add("Orange");
+System.out.println(queue.remove());
+
+What is the output of the code above? 
+Blue Red Yellow
+
+What is the running time of the code above? O(1)
+
+Illustrate the current contents of the Queue after the code finishes.
+Front of Queue:  [Green, Purple, Orange]  Back of Queue
+---
+
+Given the following unsorted array:
+10 6 21 14 1 3 5
+Suppose you are running selection sort to sort this array of integers. Selection sort consists of
+several iterations across the array. Illustrate the steps of selection sort for each iteration until the
+array is sorted
+
+1: 1 6 21 14 10 3 5
+2: 1 3 21 14 10 6 5
+3: 1 3 5 14 10 6 21
+4: 1 3 5 6 10 14 21
+5: 
+6:
+7:
+---
+
+The table below lists the big-O running times of certain operations. Fill in the missing spots of the
+table with the correct running time.
+
++--------------------------------------------+------------------+
+| Operation                              	 | Time Complexity  |
+|--------------------------------------------|------------------|
+| Linear Search                          	 | O(n)             |
+| Quick Sort                             	 | O(n^2)           |
+| Binary Search                          	 | O(log n)         |
+| Popping an element from the Stack      	 | O(1)             |
+| Printing out a linked list using recursion | O(n)             |
++--------------------------------------------+------------------+
+
+---
+
+Suppose you want to create your own Stack data structure class, but you need to decide if you
+should use an Array or a Linked List. In general, when should you use an array vs a LinkedList as an
+underlying data structure for a stack?
+
+Use an Array for the Stack when:
+1. Random Access: If you need constant-time access to elements by index, use an array. Array elements can be accessed in O(1) time.
+2. Fixed Size: If the size of the stack is fixed and known in advance, an array may be more efficient in terms of memory usage and simplicity.
+3. Sequential Access: If you frequently need to iterate through elements sequentially, an array allows for efficient sequential access.
+4. Space Efficiency: Arrays generally have less overhead compared to linked lists, as they don't need additional pointers for linking nodes.
+
+Use a Linked List for the Stack when:
+1. Dynamic Size: If the size of the stack can change dynamically, a linked list is more suitable, as it can easily grow or shrink without the need for resizing.
+2. Constant-time Insertion/Deletion: Insertion and deletion at the beginning of a linked list can be done in constant time (O(1)), making it suitable for stack operations.
+3. No Fixed Size Limitations: Linked lists don't have a fixed size limitation, unlike arrays. This flexibility can be advantageous if the size of the stack is unpredictable.
+4. No Wasted Space: Linked lists use memory more efficiently for dynamic resizing since they only allocate memory as needed.
+
+---
+
+

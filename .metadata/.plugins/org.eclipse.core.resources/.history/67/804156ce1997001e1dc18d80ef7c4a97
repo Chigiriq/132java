@@ -1,0 +1,55 @@
+
+public class test {
+
+	private static final int WALL = 1;
+    private static final int PATH = 0;
+
+    public static void main(String[] args) {
+        // Example maze represented as a 2D array
+        int[][] maze = {
+            {0, 1, 0, 0, 0},
+            {0, 1, 1, 1, 0},
+            {0, 0, 0, 0, 0},
+            {1, 1, 1, 1, 0},
+            {0, 0, 0, 0, 0}
+        };
+
+        // Starting point (row, column)
+        int startRow = 0;
+        int startCol = 0;
+
+        solveMaze(maze, startRow, startCol);
+    }
+
+    private static void solveMaze(int[][] maze, int currentRow, int currentCol) {
+        if (currentRow < 0 || currentCol < 0 || currentRow >= maze.length || currentCol >= maze[0].length) {
+            // We are out of bounds, return
+            return;
+        }
+
+        if (maze[currentRow][currentCol] == WALL) {
+            // We hit a wall, return
+            return;
+        }
+
+        if (maze[currentRow][currentCol] == 0) {
+            // Mark the current cell as visited
+            maze[currentRow][currentCol] = 2; // You can use a different value to mark the visited cells
+            System.out.println("Visited: (" + currentRow + ", " + currentCol + ")");
+        }
+
+        // Check if we reached the exit (assuming it's at the bottom-right corner)
+        if (currentRow == maze.length - 1 && currentCol == maze[0].length - 1) {
+            System.out.println("Maze solved!");
+            return;
+        }
+
+        // Move right, down, left, or up (following the right-hand rule)
+        solveMaze(maze, currentRow, currentCol + 1); // Move right
+        solveMaze(maze, currentRow + 1, currentCol); // Move down
+        solveMaze(maze, currentRow, currentCol - 1); // Move left
+        solveMaze(maze, currentRow - 1, currentCol); // Move up
+    }
+}
+
+}
